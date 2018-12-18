@@ -1,5 +1,6 @@
 import os
 
+#获取当前文件所在的绝对路径
 basedir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 
