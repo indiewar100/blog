@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 from indiewar.settings import config
 
@@ -8,3 +10,6 @@ def create_app(config_name=None):
 
     app = Flask('indiewar')
     app.config.from_object(config[config_name])
+    # config[config_name].init_app(app)
+
+    return app
