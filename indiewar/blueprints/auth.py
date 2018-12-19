@@ -1,9 +1,25 @@
-from flask import Blueprint,redirect,falsh,url_for,render_template
-from flask_login import login_user ,logout_user,login_required
+from flask import (
+    Blueprint,
+    redirect,
+    flash,
+    url_for,
+    render_template,
+)
 
-auth_bp = Blueprint('auth',_name_)
+from flask_login import (
+    login_user,
+    logout_user,
+    login_required,
+    current_user,
+)
 
-@auth_bp.route('/login',methods = ['GET'.'POST'])
+from indiewar.forms import LoginForm
+from indiewar.utils import redirect_back
+from indiewar.models import Admin
+
+auth_bp = Blueprint('auth',__name__)
+
+@auth_bp.route('/login',methods = ['GET','POST'])
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('blog.index'))
