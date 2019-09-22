@@ -36,4 +36,4 @@ This repository contains:
 
 ## License
 
-[MIT](LICENSE) © Richard Littauer
+[MIT](LICENSE) © indiewar100
